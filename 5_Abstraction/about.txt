@@ -1,0 +1,31 @@
+//Abstraction: "Implementation hiding."
+
+using access modifiers.
+
+//pure virtual function:
+    A pure virtual function is a function in C++ specified in a base class that does not have an implementation,
+    signified by "= 0" in its declaration. It serves as a contract that derived classes must implement.
+syntax:
+    virtual void myfuntion()=0;
+    
+1. "virtual": It indicates that this function is virtual, enabling polymorphism.
+2. "void": Specifies the return type.
+3. "myFunction": Name of the function.
+4. "= 0": Marks it as pure virtual, meaning it has no implementation in the base class and must be overridden in derived classes.
+
+
+example:
+class classname{
+    public:
+    virtual data_type function_name() const=0;
+};
+ 
+class classname{
+    public:
+    virtual data_type function_name() =0;
+};
+
+//Abstract class:
+    A class is abstracted in C++ by defining at least one of its functions as a>strong>pure virtual function.
+    "= 0" is used in the declaration of a pure virtual function.
+    Derived classes must provide its implementation.

@@ -1,0 +1,10 @@
+Basic concept of OOPs:
+
+1. Object
+2. Class
+3. Inhertance
+4. Encapsulation
+5. Abstraction
+6. Polymorphism
+7. Data binding
+8. Message Passing

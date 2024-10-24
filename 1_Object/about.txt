@@ -1,0 +1,36 @@
+An object is an instance of a class that encapsulates data and functionality pertaining to that data.
+
+if we need to use data member and member function of any class we need to create an object of the class.
+
+example:
+we have a class Car and it has data memeber mileage and speed and it has also some functin like On_headlight, Off_headlight,
+and we need to use this members and function in a code:
+
+Code in c++:
+
+#include<iostream>
+using namespace std;
+
+class Car{
+    public:
+    //data members
+    int mileage=1000;
+    int speed=120;
+
+    //member functions
+    void On_headlight(){
+        cout<<"Head Lights are on"<<endl;
+    }
+
+    void Off_headlight(){
+        cout<<"Head Lights are off"<<endl;
+    }
+};
+
+int main(){
+    Car new_car; //new_car is an object of the Class Car
+
+    cout<<new_car.mileage;
+
+    return 0;
+}

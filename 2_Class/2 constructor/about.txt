@@ -1,0 +1,27 @@
+Constructor: constructors are special functions of a class which are used to initialize the attributes of a class.
+A constructor in C++ is a special method that is automatically called when an object of a class is created
+Constructors have the same name as the class and may be defined inside or outside the class definition.
+
+There are 4 types of constructors in C++ classes:
+
+1. Default Constructors: The constructor that takes no argument is called default constructor.
+2. Parameterized Constructors: This type of constructor takes the arguments to initialize the data members.
+3. Copy Constructors: Copy constructor creates the object from an already existing object by copying it.
+4. Move Constructor: The move constructor also creates the object from an already existing object but by moving it.
+
+Conclusion:
+Constructors in C++ are special methods that initialize objects of a class.
+They can be default (with no arguments), parameterized (with specific values), copy constructors (for deep copying), or move constructors (for resource transfer).
+Understanding these types and their usage is essential for effective object initialization and management.
+
+constructor is a special memeber function with the same name as of the class.
+It is used to initialize the objects of its class.
+It is automatically invoked whenever an object is created.
+
+Characteristics of Constructors:
+
+1. It should be declared in the public section of the class.
+2. They are automatically invoked whenever the object is created.
+3. They cannot return values and do not have return types.
+4. It can have default arguments.
+5. We cannot refer to their address.

@@ -1,0 +1,111 @@
+//Polymorphism:
+    The term "Polymorphism" is the combination of "poly" + "morphs" which means many forms.
+    It is a greek word. In object-oriented programming, we use 3 main concepts: inheritance,
+    encapsulation, and polymorphism.
+
+//Types of Polymorphism:
+1. Compile time polymorphism.
+    a. function overloading.
+    b. operator overloading.
+2. Runtime Polymorphism.
+    a. virtual function.
+
+
+1.Compile time polymorphism(static polymorphism):
+    The overloaded functions are invoked by matching the type and number of arguments.
+    This information is available at the compile time and, therefore, compiler selects the appropriate function at the compile time.
+    It is achieved by function overloading and operator overloading which is also known as static binding or early binding.
+
+    a.  Function Overloading and Ambiguity
+        When the compiler is unable to decide which function is to be invoked among the overloaded function,
+        this situation is known as function overloading.
+        When the compiler shows the ambiguity error, the compiler does not run the program.
+    
+    Causes of Function Overloading:
+    1. Type Conversion.
+    2. Function with default arguments.
+    3. Function with pass by reference.
+
+    b.  Operator overloading:
+    
+    Operator that cannot be overloaded are as follows:
+    1. Scope operator (::)
+    2. Sizeof
+    3. member selector(.)
+    4. member pointer selector(*)
+    5. ternary operator(?:)
+     
+
+
+2.Run time polymorphism(Runtime polymorphism):
+    a.  Run time polymorphism is achieved when the object's method is invoked at the run time instead of compile time.
+        It is achieved by method overriding which is also known as dynamic binding or late binding.
+    b.  method overriding.
+
+//rules:
+1. function name
+2. function arguments.
+3. inheritance is important
+
+
+Now, let's consider the case where function name and prototype is same.
+
+class A                                  //  base class declaration.  
+{  
+   int a;  
+    public:  
+    void display(){   
+        cout<< "Class A ";  
+    }  
+};  
+class B : public A                       //  derived class declaration.  
+{  
+    int b;  
+    public:  
+    void display(){  
+        cout<<"Class B";  
+    }  
+};  
+
+In the above case, the prototype of display() function is the same in both the base and derived class.
+Therefore, the static binding cannot be applied. It would be great if the appropriate function is selected at the run time.
+This is known as run time polymorphism.
+
+//function overriding: 
+    If derived class defines same function as defined in its base class, it is known as function overriding in C++.
+    It is used to achieve runtime polymorphism.
+    It enables you to provide specific implementation of the function which is already provided by its base class.
+
+//virtual function:
+1. A virtual function is not used for performing any task. It only serves as a placeholder.
+2. When the function has no definition, such function is known as "do-nothing" function.
+3. The "do-nothing" function is known as a pure virtual function. A pure virtual function is a function declared in the base class that has no definition relative to the base class.
+4. A class containing the pure virtual function cannot be used to declare the objects of its own, such classes are known as abstract base classes.
+5. The main objective of the base class is to provide the traits to the derived classes and to create the base pointer used for achieving the runtime polymorphism.
+
+#include<iostream>
+using namespace std;
+
+class A{
+ public:    
+ virtual void display()    
+ {    
+  cout << "Base class is invoked"<<endl;    
+ }    
+};    
+class B:public A    
+{    
+ public:    
+
+ void display()    
+ {    
+  cout << "Derived Class is invoked"<<endl;    
+ }    
+};    
+int main()    
+{    
+ A* a;    //pointer of base class    
+ B b;     //object of derived class    
+ a = &b;    
+ a->display();   //Late Binding occurs    
+}

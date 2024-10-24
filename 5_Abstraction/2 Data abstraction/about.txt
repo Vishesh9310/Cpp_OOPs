@@ -1,0 +1,22 @@
+//Data Abstraction():
+1.  Data Abstraction is a process of providing only the essential details to the outside world and hiding the internal details,
+    i.e., representing only the essential details in the program.
+2.  Data Abstraction is a programming technique that depends on the seperation of the interface and implementation details of the program.
+
+//Data abstraction can be achieved in two ways:
+1. Abstraction using classes:
+    An abstraction can be achieved using classes.
+    A class is used to group all the data members and member functions into a single unit by using the access specifiers.
+    A class has the responsibility to determine which data member is to be visible outside and which is not.
+
+2. Abstraction in header files:
+    An another type of abstraction is header file.
+    For example, pow() function available is used to calculate the power of a number without actually knowing which algorithm function uses to calculate the power.
+    Thus, we can say that header files hides all the implementation details from the user.
+
+//Advantages Of Abstraction:
+1. Implementation details of the class are protected from the inadvertent user level errors.
+2. A programmer does not need to write the low level code.
+3. Data Abstraction avoids the code duplication, i.e., programmer does not have to undergo the same tasks every time to perform the similar operation.
+4. The main aim of the data abstraction is to reuse the code and the proper partitioning of the code across the classes.
+5. Internal implementation can be changed without affecting the user level code.

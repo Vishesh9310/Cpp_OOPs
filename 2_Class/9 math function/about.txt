@@ -1,0 +1,1 @@
+C++ offers some basic math functions and the required header file to use these functions is <math.h>

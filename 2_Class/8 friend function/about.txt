@@ -1,0 +1,21 @@
+If a function is defined as a friend function in C++, then the protected and private data of a class can be accessed using the function.
+By using the keyword friend compiler knows the given function is a friend function.
+For accessing the data, the declaration of a friend function should be done inside the body of a class starting with the keyword friend.
+
+for example:
+ 
+class class_name{
+    friend data_type function_name(arguments);
+};
+
+key:In the above declaration, the friend function is preceded by the keyword friend.
+The function can be defined anywhere in the program like a normal C++ function.
+The function definition does not use either the keyword friend or scope resolution operator.
+
+1. The function is not in the scope of the class to which it has been declared as a friend.
+2. It cannot be called using the object as it is not in the scope of that class.
+3. It can be invoked like a normal function without using the object.
+4. It cannot access the member names directly and has to use an object name and dot membership operator with the member name.
+5. It can be declared either in the private or the public part.
+
+c++ friend function exmaple:

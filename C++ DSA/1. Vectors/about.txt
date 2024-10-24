@@ -1,0 +1,80 @@
+//C++ Vector:
+A vector in C++ is like a resizable array.
+Both vectors and arrays are data structures used to store multiple elements of the same data type.
+The difference between an array and a vector, is that the size of an array cannot be modified (you cannot add or remove elements from an array). A vector however, can grow or shrink in size as needed.
+To use a vector, you have to include the <vector> header file:
+
+//vector headerfile
+#include <vetor>
+
+//create a vector
+vector<string> cars;
+
+example:
+    // Create a vector called cars that will store strings
+    vector<string> cars = {"Volvo", "BMW", "Ford", "Mazda"};
+
+    // Print vector elements
+    for (string car : cars) {
+        cout << car << "\n";
+    }
+
+//access a vector:
+you can access a vector element by referring to the index number inside square brackets [].
+Vectors, like arrays, are 0-indexed, meaning that [0] is the first element, [1] is the second element, and so on.
+
+    vector<string> cars ={"Volvo", "BMW", "Ford", "Mazda"};
+    cout<<cars[0];
+    cout<<cars[1];
+
+//advantages:
+One advantage of using the vector library, is that it includes many useful functions. For example, you can access the first or the last element of a vector with the .front() and .back() functions:
+
+    // Create a vector called cars that will store strings
+    vector<string> cars = {"Volvo", "BMW", "Ford", "Mazda"};
+    // Get the first element
+    cout << cars.front();
+    // Get the last element
+    cout << cars.back();
+
+to access an element at a specified index, you can use the .at() function and specify the index number:
+    //get the second element
+    cout<<car.at(1);
+
+Note: The .at() function is often preferred over square brackets [] because it lets you know if an error occurs.
+For example if the element is out of range:
+    // Create a vector called cars that will store strings
+    vector<string> cars = {"Volvo", "BMW", "Ford", "Mazda"};
+    // Try to access an element that does not exist (throws an error message)
+    cout << cars.at(6);
+//here error occurs in compile time.
+
+
+//change a vector element:
+    cars[0]="Opel";
+    however, it is safer to use .at() function
+    cars.at(0)="Opel";
+
+//add vector elements:
+    cars.push_back("Tesla");
+    //push_back is the function that is used to add an element at the end of the vector.
+
+//remove vector elements:
+    cars.pop_back();
+    //pop_back fucntion, which removes an element from the end of the vector.
+
+//vector size:
+    cars.size();
+
+//check if a vector is empty:
+    cars.empty();
+
+//loop through a vector:
+    //for loop
+    for(int i=0;i<cars.size();i++){
+        cout<<cars[i]<<"\n";
+    }
+    //for each loop
+    for(string car: cars){
+        cout<<car<<endl;
+    }

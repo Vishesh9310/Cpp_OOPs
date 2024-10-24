@@ -1,0 +1,20 @@
+Inheritance: It is a feature or a process in which, new classes are created from the existing classes.
+The new class created is called “derived class” or “child class” and the existing class is known as the “base class” or “parent class”.
+The derived class now is said to be inherited from the base class.
+
+Inheritance are mainly 5 types 
+1. Single:  A class that is derived from another class.
+2. Multiple: A class can also be derived from more than one base class, using a comma-separated list.
+3. Hierarchical: It is defined as the process of deriving more than one class from a base class.
+4. Multi-level: A class can also be derived from one class, which is already derived from another class.
+5. Hybrid: Hybrid inheritance is a combination of more than one type of inheritance.
+
+Modes of Inheritance in C++
+Mode of inheritance controls the access level of the inherited members of the base class in the derived class.
+In C++, there are 3 modes of inheritance:
+
+Public Mode:  class ABC : public XYZ{...};//public derivation
+Protected Mode:  class ABC : protected XYZ{...};//protected derivation
+Private Mode:  class ABC : private XYZ{...};//private derivation
+
+class ABC: XYZ{...}; //private derivation by default

@@ -1,0 +1,23 @@
+Defination: A class is a user-defined data type, which holds its own data members and member functions, which can be accessed and used by creating an instance of that class.
+A C++ class is like a blueprint for an object.
+
+A Class is a user-defined data type that has data members and member functions.
+Data members are the data variables and member functions are the functions used to manipulate these variables together,
+these data members and member functions define the properties and behaviour of the objects in a Class.
+In the above example of class Car, the data member will be speed limit, mileage, etc, and member functions can be applying brakes, increasing speed, etc.
+
+
+example:
+Class classname{
+    //access specifiers
+    public/private/protected:
+
+    //data members
+    string name='Cpp';
+    int marks=99;
+
+    //member functions
+    void print(){
+        cout<<"Hello";
+    }
+}
